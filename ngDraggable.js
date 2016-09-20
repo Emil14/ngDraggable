@@ -255,10 +255,9 @@ angular.module("ngDraggable", [])
                 var moveElement = function (x, y) {
                     if(allowTransform) {
                         element.css({
-                            transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ' + x + ', ' + y + ', 0, 1)',
-                            'z-index': 99999,
-                            '-webkit-transform': 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ' + x + ', ' + y + ', 0, 1)',
-                            '-ms-transform': 'matrix(1, 0, 0, 1, ' + x + ', ' + y + ')'
+                            transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ' + x + ', 0, 0, 1)',
+                            '-webkit-transform': 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ' + x + ', 0, 0, 1)',
+                            '-ms-transform': 'matrix(1, 0, 0, 1, ' + x + ', 0')'
                         });
                     }else{
                         element.css({'left':x+'px','top':y+'px', 'position':'fixed'});
@@ -467,9 +466,9 @@ angular.module("ngDraggable", [])
                 };
                 var moveElement = function(x,y) {
                     element.css({
-                        transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, '+x+', '+y+', 0, 1)', 'z-index': 99999, 'visibility': 'visible',
-                        '-webkit-transform': 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, '+x+', '+y+', 0, 1)',
-                        '-ms-transform': 'matrix(1, 0, 0, 1, '+x+', '+y+')'
+                        transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, '+x+', 0, 0, 1)', 'visibility': 'visible',
+                        '-webkit-transform': 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, '+x+', 0, 0, 1)',
+                        '-ms-transform': 'matrix(1, 0, 0, 1, '+x+', 0)'
                         //,margin: '0'  don't monkey with the margin,
                     });
                 };
