@@ -257,7 +257,7 @@ angular.module("ngDraggable", [])
                         element.css({
                             transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ' + x + ', 0, 0, 1)',
                             '-webkit-transform': 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, ' + x + ', 0, 0, 1)',
-                            '-ms-transform': 'matrix(1, 0, 0, 1, ' + x + ', 0')'
+                            '-ms-transform': 'matrix(1, 0, 0, 1, ' + x + ', 0)'
                         });
                     }else{
                         element.css({'left':x+'px','top':y+'px', 'position':'fixed'});
